@@ -7,21 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Link/script -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="./css/mormalize.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js" defer type="module"></script>
+    
 
     <!-- Title -->
     <title>Litvinov</title>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     
@@ -43,28 +41,33 @@
     <main class="main">
         <img class="main__monster" src="./img/monster.png" alt="main__monster">
         <img class="main__litvinov" src="./img/литвинов.png" alt="Литвинов">
-        <img class="main__frontend_developer" src="./img/frontend_developer.png" alt="frontend_developer">
+        <img class="main__frontend_developer" src="./img/fullstack_developer.png" alt="fullstack_developer">
     </main>
 
     <section class="about noise">
-        <img src="./img/данил.png" alt="данил" class="about__danil">
+        <img src="./img/данил.png" alt="Данил" class="about__danil">
 
-        <div class="about-wrapper container">
-            <div class="about-info">
-                <div class="about-info__top">
-                    <img src="./img/avatarka.png" alt="avatarka" class="about-info__img">
-                    <h3 class="about-info__text">Обучаюсь в НКПиИТ, 2 курс. Обожаю программирование, выбрал frontend разработку. А также изучаю нейронные сети, backend и конечно же английский.</h3>
-                </div>
-                <div class="about-info__bottom">
-                    <p class="about-info__title">Достижения</p>
-                    <div class="about-info-list-achive">
-                        <img src="./img/achive/1.png" alt="achive_1" class="about-info-list-achive__item">
-                        <img src="./img/achive/2.png" alt="achive_2" class="about-info-list-achive__item">
-                        <img src="./img/achive/3.png" alt="achive_3" class="about-info-list-achive__item">
+        <div class="about__wrapper container">
+            <div class="avatar">
+                <img src="./img/main1234.png" alt="avatar" class="avatar__img">
+                <div class="achive">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/achive/it-realii-2_0.png" alt="" class="swiper-slide__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/achive/deepcode_challenge.png" alt="" class="swiper-slide__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/achive/techno-hack.png" alt="" class="swiper-slide__img">
+                        </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
-    
+            
             <nav class="nav">
                 <img class="nav__menu" src="./img/Меню.png" alt="Меню">
     

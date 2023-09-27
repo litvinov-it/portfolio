@@ -197,73 +197,92 @@ $path_noise: url(../img/noise.png);
     position: relative;
     width: 100%;
     background-color: $main_color;
-
-    &-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 3em;
-        padding-block: 20em;
-    }
-
+    
     &__danil {
         width: 40%;
         position: absolute;
         top: -1px;
         right: 10%;
     }
+    
+    &__wrapper {
+        padding-top: 15rem;
+        padding-bottom: 13rem;
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+    }
+}
 
-    &-info {
-        flex-basis: 80%;
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 1.5em;
+// Avatar
+.avatar {
+    position: relative;
+    display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   flex-basis: 35%;
+   max-height: 100%;
+
+
+    &__img {
+        width: 100%;
+    }
+
+    &-desc {
+        position: absolute;
+        top: 0;
+        right: 0;
         display: flex;
         flex-direction: column;
-        gap: 1.5em;
+        justify-content: space-between; 
+        text-align: right;
 
-        &__top {
+        &__item {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5em;
+            flex-direction: column;
         }
     
-        &__img {
-            flex-basis: 20%;
-            border-radius: 50%;
-            overflow: hidden;
+        &__subtext {
+            text-transform: uppercase;
+            font-size: 14px;
         }
     
         &__text {
-            @include middle_text;
-            flex-basis: 60%;
-        }
-    
-        &__bottom {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5em;
-        }
-
-        &__title {
-            @include title_text;
-            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 24px;
         }
     }
+}
 
-    &-info-list-achive {
+.achive {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    transform: translateX(60%);
+    display: flex;
+    min-width: 0;
+    width: 50%;
+}
+
+.swiper {
+    &-wrapper {
         display: flex;
-        justify-content: space-between;
+    }
 
-        &__item {
-            width: 32%;
-        }
+    &-slide__img {
+        width: 100%;
+    }
+
+    &-pagination-bullet-active {
+        background-color: #000;
     }
 }
 
 // Navigation
 .nav {
     flex-basis: 20%;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     gap: 3em;
@@ -510,8 +529,17 @@ $path_noise: url(../img/noise.png);
 
 // Media
 @media (width <= 1000px) {
-    .about-wrapper {
+    .about__wrapper {
         padding-block: 10em;
+        display: flex;
+        gap: 5rem;
+    }
+    .avatar {
+        width: 50%;
+        flex-basis: inherit;
+    }
+    .nav {
+        margin-top: 1rem;
     }
     .header {
         margin-bottom: 1.5em;
@@ -531,7 +559,6 @@ $path_noise: url(../img/noise.png);
     }
     .about-wrapper {
         flex-direction: column;
-        // align-items: start;
     }
     .nav {
         align-items: center;    
@@ -570,29 +597,17 @@ $path_noise: url(../img/noise.png);
 }
 
 @media (width <= 768px) {
-    .about-wrapper {
-        padding-block: 6em;
+    .about__wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-block: 7rem;
     }
-    .about-info {
-        padding: 1em;
-        box-shadow: rgba(46, 39, 34, 0.5) 0px 0px 10px;
-
-        &__img {
-            width: 30%;
-        }
-
-        &__top {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        &-list-achive {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5em;
-        }
+    .avatar {
+        margin-left: -5rem;
+        width: 60%;
+    }
+    .nav {
+        display: none;
     }
     .portfolio {
         gap: 3em;
@@ -625,8 +640,11 @@ $path_noise: url(../img/noise.png);
 }
 
 @media (width <= 360px) {
-    .about-wrapper {
-        padding-block: 5em;
+    .about__wrapper {
+        padding-block: 5rem;
+    }
+    .avatar {
+        margin-left: -3rem;
     }
     .about-info__text {
         font-size: 16px;
